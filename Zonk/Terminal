@@ -1,0 +1,98 @@
+1|using System;
+1|namespace NoName{
+1|  class TwoVariables
+1|  {
+1|    static void Main(string[] args)
+1|    {
+1|      Int32 FirstVariable = Convert.ToInt32(Console.ReadLine());
+1|      Int32 SecondVariable = Convert.ToInt32(Console.ReadLine());
+1|      FirstVariable = FirstVariable + SecondVariable;
+1|      SecondVariable = FirstVariable - SecondVariable;
+1|      using System.Collections;
+1|    }
+1|  }
+1|
+1|  using System.Collections.Generic;
+1|  using UnityEngine;
+1|  using UnityEngine.SceneManagement;
+1|  
+1|  public class NextScene : MonoBehaviour
+1|  {
+1|      public Animator animator;
+1|      public void FadeToLevelFun ()
+1|      {
+1|          animator.SetTrigger("NextLevelTrigger");
+1|      }
+1|  
+1|      public void OnFadeCompleteFun()
+1|      {
+1|          SceneManager.LoadScene(3);
+1|      }
+1|  }
+1|} 
+2|SELECT sum(t4.value) as "План", STR_TO_DATE(t4.date, '%d-%m-%Y') AS "time" FROM
+2|(SELECT  t.id, t.subject, t3.depth, t.value, 
+2|   CASE WHEN t.field_name = "Август 2020 (план)" THEN "2020-08-01"
+2|  WHEN t.field_name = "Январь 2020 (факт)" THEN "2020-01-01" end AS DATE
+2|   FROM (
+2|          SELECT i.id AS id, i.subject AS subject, i.updated_on as updated_on,
+2|            cf.name AS field_name,
+2|            cv.value AS value
+2|          FROM issues i
+2|        LEFT JOIN custom_values cv
+2|            ON i.id = cv.customized_id
+2|        LEFT JOIN custom_fields cf
+2|            ON cv.custom_field_id=cf.id      
+2|         WHERE cv.customized_type="Issue" and (i.project_id = 2284)) t 
+2|   LEFT join
+2|   (SELECT  t2.id,
+2|  GROUP_CONCAT(DISTINCT(CASE WHEN t2.field_name = "Код бюджета" THEN t2.value else null END)) AS depth   
+2|   FROM ($    SELECT i.id AS id, i.subject AS subject, i.updated_on as updated_on,
+2|            cf.name AS field_name,
+2|            cv.value AS value
+2|          FROM issues i
+2|        LEFT JOIN custom_values cv
+2|            ON i.id = cv.customized_id
+2|        LEFT JOIN custom_fields cf$   ON cv.custom_field_id=cf.id      
+2|         WHERE cv.customized_type="Issue" and (i.project_id = 2284)) t2
+2|   GROUP BY t2.id) t3       
+2|   ON t.id=t3.id
+2|   WHERE INSTR(t.field_name, "план")>0 ) t4
+2|   WHERE substr(t4.date,1,7) in ($time)  and t4.value!=0 and t4.depth=1 and t4.subject = 'Себестоимость реализованной готовой продукции (товаров, работ, услуг)'
+2|   group by t4.date
+3|using RakNet;
+3|using vsnake.game;
+3|namespace vsnake.net{
+3|    class CNetPlayerManager : CNetManager<CNetPlayer>{
+3|		CLocalPlayer mLocalPlayer;
+3|		int _lastTickRate;
+3|		public void setLocalPlayer(CLocalPlayer plr){
+3|			mLocalPlayer = plr;
+3|			this.Add(plr, (uint)plr.GetId());
+3|		}
+3|		public CLocalPlayer getLocalPlayer(){
+3|			return mLocalPlayer;
+3|		}
+3|		public CNetPlayerManager(uint size):base(size) { 
+3|		}
+3|		~CNetPlayerManager() { }
+3|		public void Process(){
+3|			if (mLocalPlayer != null){
+3|				BitStream bs = new BitStream();
+3|				bs.Write((byte)EGamePackets.PlayerSync); // packet id
+3|				Player player = mLocalPlayer.GetGamePlayer();
+3|				bs.Write(player.mPlayerEntity.Count);
+3|				for (int i = 0; i < player.mPlayerEntity.Count; i++){
+3|					bs.Write(player.mPlayerEntity[i].getPosition().X); // pos x
+3|					bs.Write(player.mPlayerEntity[i].getPosition().Y); // pos y
+3|				}
+3|				if (CNetGame.GetInterface() != null){
+3|					CNetGame.GetInterface().Send(bs, PacketPriority.HIGH_PRIORITY, PacketReliability.UNRELIABLE_SEQUENCED, (char)0, CNetGame.GetInterface().GetSystemAddressFromIndex(0), false);
+3|					player.ShouldBeUpdate = false;
+3|				}
+3|				bs.Dispose();
+3|				bs = null;
+3|			}
+3|        }
+3|	};
+3|}

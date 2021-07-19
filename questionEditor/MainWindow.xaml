@@ -1,0 +1,35 @@
+﻿<Window x:Class="questionEditor.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:questionEditor"
+        mc:Ignorable="d"
+        Title="questionEditor" Height="345" Width="693.759" ResizeMode="CanMinimize">
+    <Grid>
+        <TabControl HorizontalAlignment="Left" Height="24" Margin="10,-1,0,0" VerticalAlignment="Top" Width="365" SelectionChanged="TabControl_SelectionChanged">
+            <TabItem Header="Уровень 1">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+            <TabItem Header="Уровень 2">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+            <TabItem Header="Уровень 3">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+        </TabControl>
+        <ListView x:Name="questionsList" Margin="0,21,0,36" MouseDoubleClick="questionsList_MouseDoubleClick" >
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn DisplayMemberBinding="{Binding mTitle}" Width="400">Вопрос</GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding mAnswer}" Width="200">Вариант ответа</GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding _mRezult}" Width="70">Ответ</GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button Content="Добавить" HorizontalAlignment="Left" Margin="10,282,0,0" VerticalAlignment="Top" Width="167" Click="Button_Click"/>
+        <Button Content="Удалить" HorizontalAlignment="Left" Margin="208,282,0,0" VerticalAlignment="Top" Width="167" Click="Button_Click_1"/>
+
+
+    </Grid>
+</Window>

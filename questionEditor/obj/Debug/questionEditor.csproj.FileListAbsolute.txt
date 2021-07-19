@@ -1,0 +1,32 @@
+C:\Users\nicop\OneDrive\Рабочий стол\projects\ghostwalker\questionEditor\bin\Debug\questionEditor.exe.config
+C:\Users\nicop\OneDrive\Рабочий стол\projects\ghostwalker\questionEditor\bin\Debug\questionEditor.exe
+C:\Users\nicop\OneDrive\Рабочий стол\projects\ghostwalker\questionEditor\bin\Debug\questionEditor.pdb
+C:\Users\nicop\OneDrive\Рабочий стол\projects\ghostwalker\questionEditor\obj\Debug\questionEditor.csprojAssemblyReference.cache
+C:\Users\nicop\OneDrive\Рабочий стол\projects\ghostwalker\questionEditor\obj\Debug\MainWindow.g.cs
+C:\Users\nicop\OneDrive\Рабочий стол\projects\ghostwalker\questionEditor\obj\Debug\App.g.cs
+C:\Users\nicop\OneDrive\Рабочий стол\projects\ghostwalker\questionEditor\obj\Debug\questionEditor_MarkupCompile.cache
+C:\Users\nicop\OneDrive\Рабочий стол\projects\ghostwalker\questionEditor\obj\Debug\questionEditor_MarkupCompile.lref
+C:\Users\nicop\OneDrive\Рабочий стол\projects\ghostwalker\questionEditor\obj\Debug\MainWindow.baml
+C:\Users\nicop\OneDrive\Рабочий стол\projects\ghostwalker\questionEditor\obj\Debug\questionEditor.g.resources
+C:\Users\nicop\OneDrive\Рабочий стол\projects\ghostwalker\questionEditor\obj\Debug\questionEditor.Properties.Resources.resources
+C:\Users\nicop\OneDrive\Рабочий стол\projects\ghostwalker\questionEditor\obj\Debug\questionEditor.csproj.GenerateResource.cache
+C:\Users\nicop\OneDrive\Рабочий стол\projects\ghostwalker\questionEditor\obj\Debug\questionEditor.exe
+C:\Users\nicop\OneDrive\Рабочий стол\projects\ghostwalker\questionEditor\obj\Debug\questionEditor.pdb
+C:\Users\nicop\OneDrive\Рабочий стол\projects\ghostwalker\questionEditor\obj\Debug\editor.g.cs
+C:\Users\nicop\OneDrive\Рабочий стол\projects\ghostwalker\questionEditor\obj\Debug\editor.baml
+C:\Users\chlor\Documents\GitHub\ghostwalker\questionEditor\bin\Debug\questionEditor.exe.config
+C:\Users\chlor\Documents\GitHub\ghostwalker\questionEditor\obj\Debug\questionEditor.exe
+C:\Users\chlor\Documents\GitHub\ghostwalker\questionEditor\obj\Debug\questionEditor.pdb
+C:\Users\chlor\Documents\GitHub\ghostwalker\questionEditor\bin\Debug\questionEditor.exe
+C:\Users\chlor\Documents\GitHub\ghostwalker\questionEditor\bin\Debug\questionEditor.pdb
+C:\Users\chlor\Documents\GitHub\ghostwalker\questionEditor\obj\Debug\questionEditor.csprojResolveAssemblyReference.cache
+C:\Users\chlor\Documents\GitHub\ghostwalker\questionEditor\obj\Debug\editor.g.cs
+C:\Users\chlor\Documents\GitHub\ghostwalker\questionEditor\obj\Debug\MainWindow.g.cs
+C:\Users\chlor\Documents\GitHub\ghostwalker\questionEditor\obj\Debug\App.g.cs
+C:\Users\chlor\Documents\GitHub\ghostwalker\questionEditor\obj\Debug\questionEditor_MarkupCompile.cache
+C:\Users\chlor\Documents\GitHub\ghostwalker\questionEditor\obj\Debug\questionEditor_MarkupCompile.lref
+C:\Users\chlor\Documents\GitHub\ghostwalker\questionEditor\obj\Debug\editor.baml
+C:\Users\chlor\Documents\GitHub\ghostwalker\questionEditor\obj\Debug\MainWindow.baml
+C:\Users\chlor\Documents\GitHub\ghostwalker\questionEditor\obj\Debug\questionEditor.g.resources
+C:\Users\chlor\Documents\GitHub\ghostwalker\questionEditor\obj\Debug\questionEditor.Properties.Resources.resources
+C:\Users\chlor\Documents\GitHub\ghostwalker\questionEditor\obj\Debug\questionEditor.csproj.GenerateResource.Cache
